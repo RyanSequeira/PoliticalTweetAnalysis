@@ -24,7 +24,7 @@ for i in range(6, -1, -1):
     # Search parameters
     search_object = api.search(search_term, lang='en', count=100, since_id=max_id, until=until)
     # Dump every tweet into a file based on the first search term
-    with open('data/Permanent/' + str(search_term.split(" OR")[0]) + "_" + str(until) + ".txt", 'w') as write_file:
+    with open('data/Crises/' + str(search_term.split(" OR")[0]) + "_" + str(until) + ".txt", 'w') as write_file:
         for status in search_object:
             if status.id > max_id:
                 max_id = status.id
